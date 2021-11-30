@@ -9,7 +9,7 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 $servidor = "localhost"; $usuario = "root"; $contrasenia = ""; $nombreBaseDatos = "prueba";
 $conexionBD = new mysqli($servidor, $usuario, $contrasenia, $nombreBaseDatos);
 
-// encuentra un usuarioo 
+// encuentra un usuario x2 
 if (isset($_GET["consultar"])){
     $sqlConsultar = mysqli_query($conexionBD,"SELECT * FROM cities JOIN usuarios ON estado_id= cities.id WHERE usuarios.id=".$_GET["consultar"]);
     if(mysqli_num_rows($sqlConsultar) > 0){
